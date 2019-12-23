@@ -1,0 +1,30 @@
+<% if @book.errors.any? %>
+<%= @book.errors.count %>error
+<% @book.errors.full_messages.each do |massage| %>
+<%= massage %>
+<% end %>
+<% end %>
+<h1>Editing Book</h1>
+   <%= form_for(@book) do |f| %>
+
+<h4>Title</h4>
+<%= f.text_field :title %>
+
+<h4>Opinion</h4>
+<%= f.text_area :body %>
+
+<%= f.submit 'Update Book' %>
+
+<% end %> 
+
+    <footer>
+  <div class="container">
+  	<div class="row">
+    	<div class="col-xs-3 col-xs-offset-9">
+    		<p>CopyRight Infratop.inc</p>
+    	</div>
+    </div>
+  </div>
+</footer>
+
+
